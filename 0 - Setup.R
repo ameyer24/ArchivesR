@@ -26,12 +26,8 @@ raw_table <- raw_table %>%
 
 # Clean up Dates with some version of "unknown" or "n.d."
 date_unknown <- c("n.d.","N.D.","no date")
-raw_table2 <- raw_table %>%
+raw_table <- raw_table %>%
   mutate(Date = if_else(Date %in% date_unknown,
                                "Unknown",
                                Date))
-# Find a way to spilt the string based for the inclusive dates.
-# perhaps do this within the EAD creator?
-
-
-## Creating the EAD in XML
+# At some point, need to divide the inclusive dates into begin and end.
