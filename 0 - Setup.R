@@ -31,3 +31,5 @@ raw_table <- raw_table %>%
                                "Unknown",
                                Date))
 # At some point, need to divide the inclusive dates into begin and end.
+
+# Some finding aids have acronyms; explain them.
