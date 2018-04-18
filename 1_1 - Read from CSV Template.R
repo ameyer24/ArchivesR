@@ -1,33 +1,36 @@
-test_file <- "C:/DataScience/video_umatics.csv"
-
-raw_table <- read.csv(test_file)
-
-## Create Item list in EAD
-box_folder_list <- newXMLNode("did")
-
+###############################################################################
+## Import Data from CSV Template
+###############################################################################
+## Use a template instead
+test_file <- "C:/DataScience/box_folder_template.csv"
+raw_table <- read.csv(test_file, stringsAsFactors=FALSE)
 
 ###############################################################################
-## Create each Component Node
+## Is it a single date or inclusive date?
 ###############################################################################
+# What is an inclusive date?
+# Answer: 1 or 2 followed by 3 digits, -, 1 or 2 followed by 3 digits.
+date_range_regex <- "[1,2]\\d{3}-[1,2]\\d{3}"
 
-makeTitle  <- function(x) newXMLNode("unittitle", format(x))
-makeID     <- function(x) newXMLNode("unitid", format(x))
-makeCase    <- function(x) newXMLNode("container", format(x),
-                                      attrs = c(label = "Moving Images",
-                                                type="case"))
+raw_table$Date_Type <- if_else(str_detect(raw_table[[2]], date_range_regex),
+                               "inclusive",
+                               "single")
+
+raw_table <- separate(raw_table,
+                      col=Date,
+                      into=c("start_date","end_date"),
+                      sep = "-",
+                      remove=FALSE)
+min_date <- min(raw_table$start_date, na.rm=T)
+max_date <- max(raw_table$end_date, na.rm=T)
+
+###############################################################################
+## What about missing values or non-date values?
+###############################################################################
+date_unknown <- c("n.d.","N.D.","no date","N/A")
+raw_table[[2]] <- if_else(raw_table[[2]] %in% date_unknown,
+                          "Undated",
+                          raw_table[[2]])
 
 
-  
-sapply(row.names(raw_table),
-         function(x) {
-           newXMLNode("c",
-                      parent = box_folder_list,
-                      attrs = c(level="item"),
-                      .children = c(lapply(raw_table[x,2], makeTitle),
-                                    lapply(raw_table[x,1], makeID),
-                                    lapply(raw_table[x,6], makeCase)))
-         })
 
-box_folder_list
-
-saveXML(box_folder_list,file = "box_folder.xml")
