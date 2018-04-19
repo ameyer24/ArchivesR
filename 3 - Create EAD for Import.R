@@ -6,6 +6,8 @@ collection_id <-"1/0/3"
 collection_date <- paste(min_date, max_date, sep="-")
 collection_date_norm <- paste(min_date, max_date, sep="/")
 
+collection_access_note <- "There are no access restrictions on the materials and the collection is open to all members of the public. However, the researcher assumes full responsibility for conforming with the laws of libel, privacy, and copyright that may be involved in the use of this collection."
+
 ###############################################################################
 ## Create Collection Level Description
 ###############################################################################
@@ -34,6 +36,16 @@ collection_date <- newXMLNode("unitdate",
                               collection_date,
                               parent = collection_did,
                               attrs = c(normal=collection_date_norm))
+
+access_restriction <- newXMLNode("accessrestrict",
+                                 parent = arch_desc)
+access_head <- newXMLNode("head",
+                          "Conditions Governing Access",
+                          parent = access_restriction)
+
+access_para <- newXMLNode("p",
+                          collection_access_note,
+                          parent = access_restriction)
 
 
 ###############################################################################
