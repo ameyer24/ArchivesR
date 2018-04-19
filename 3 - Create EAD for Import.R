@@ -1,8 +1,9 @@
 ###############################################################################
 ## Define Collection Level Stuff
 ###############################################################################
-collection_title <- "Covenant Treasurer’s Records"
-collection_id <-"1/0/2"
+collection_title <- "Covenant Headquarters – Papers and Correspondence"
+collection_id <-"1/0/3"
+collection_date <- paste(min_date, max_date, sep="-")
 collection_date_norm <- paste(min_date, max_date, sep="/")
 
 ###############################################################################
@@ -30,6 +31,7 @@ newXMLNode("extent", "1 Import",
            attrs = c(altrender="materialtype spaceoccupied"))
 
 collection_date <- newXMLNode("unitdate",
+                              collection_date,
                               parent = collection_did,
                               attrs = c(normal=collection_date_norm))
 
@@ -41,7 +43,8 @@ collection_date <- newXMLNode("unitdate",
 ## This is just carrying box/folder information...
 ## collection level description will be added in ArchivesSpace.
 
-box_folder_list <- newXMLNode("did")
+box_folder_list <- newXMLNode("did",
+                              parent = arch_desc)
 
 
 ###############################################################################
@@ -60,8 +63,8 @@ makeFolder <- function(x) newXMLNode("container", format(x), attrs = c(type="fol
                       attrs = c(level="file"),
                       .children = c(lapply(raw_table[x,1], makeTitle),
                                     lapply(raw_table[x,2], makeDate),
-                                    lapply(raw_table[x,3], makeBox),
-                                    lapply(raw_table[x,4], makeFolder)))
+                                    lapply(raw_table[x,5], makeBox),
+                                    lapply(raw_table[x,6], makeFolder)))
          })
 
 
@@ -70,7 +73,7 @@ saveXML(box_folder_list,file = "box_folder.xml")
 ###############################################################################
 ## Add Box and Folder List to Collection Level Description
 ###############################################################################
-xmlParent(box_folder_list) = arch_desc
+
 main_ead
 saveXML(main_ead, file = "ead_for_ASpace.xml")
 
