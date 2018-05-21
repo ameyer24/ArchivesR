@@ -79,11 +79,8 @@ makeFolder <- function(x) newXMLNode("container", format(x), attrs = c(type="fol
                                     lapply(raw_table[x,6], makeFolder)))
          })
 
-
-saveXML(box_folder_list,file = "box_folder.xml")
-
 ###############################################################################
-## Add Box and Folder List to Collection Level Description
+## Save the EAD as XML for import into ArchivesSpace
 ###############################################################################
 
 
