@@ -1,8 +1,8 @@
 ###############################################################################
 ## Define Collection Level Stuff
 ###############################################################################
-collection_title <- "Covenant Headquarters – Papers and Correspondence"
-collection_id <-"1/0/3"
+collection_title <- "Evangelical Covenant Hospital, Omaha NE"
+collection_id <-"2/10/2/7"
 collection_date <- paste(min_date, max_date, sep="-")
 collection_date_norm <- paste(min_date, max_date, sep="/")
 
@@ -86,6 +86,6 @@ saveXML(box_folder_list,file = "box_folder.xml")
 ## Add Box and Folder List to Collection Level Description
 ###############################################################################
 
-main_ead
+
 saveXML(main_ead, file = "ead_for_ASpace.xml")
 
