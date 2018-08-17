@@ -1,8 +1,4 @@
 ###############################################################################
-## Clean Up the Data
-###############################################################################
-
-###############################################################################
 ## Determine Date Range
 ###############################################################################
 # What is an inclusive date?
@@ -22,8 +18,8 @@ raw_table <- separate(raw_table,
 min_date <- min(raw_table$start_date, na.rm=T)
 max_date <- max(raw_table$end_date, na.rm=T)
 ## Manually define dates if there is a need.
-min_date <- "1900"
-max_date <- "2005"
+min_date <- "1917"
+max_date <- "1998"
 
 ###############################################################################
 ## Standardize "No Date" Text
@@ -33,11 +29,21 @@ raw_table$Date <- if_else(raw_table$Date %in% date_unknown,
                           "Undated",
                           raw_table$Date)
 
+
+
+
+
+
+
+
+
 ###############################################################################
 ## Update the actual data
 ###############################################################################
 # & to and
 raw_table$Title <- gsub("&","and",raw_table$Title)
+raw_table$Title <- gsub("  "," ",raw_table$Title)
+raw_table$Title <- gsub("NPCTS ","",raw_table$Title)
 #raw_table$Title <- gsub("Corresp.","Correspondence",raw_table$Title)
 
 

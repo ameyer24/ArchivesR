@@ -1,8 +1,8 @@
 ###############################################################################
-## Define Collection Level Stuff
+## Define Collection Level Information
 ###############################################################################
-collection_title <- "Leech Bulk Upload"
-collection_id <-"LBU"
+collection_title <- "North Park College and Theological Seminary Alumni Files"
+collection_id <-"9/1/3/4"
 collection_date <- paste(min_date, max_date, sep="-")
 collection_date_norm <- paste(min_date, max_date, sep="/")
 collection_access_note <- "There are no access restrictions on the materials and the collection is open to all members of the public. However, the researcher assumes full responsibility for conforming with the laws of libel, privacy, and copyright that may be involved in the use of this collection."
@@ -61,24 +61,24 @@ box_folder_list <- newXMLNode("did",parent = arch_desc)
 ###############################################################################
 
 makeTitle   <- function(x) newXMLNode("unittitle", format(x))
-makeID      <- function(x) newXMLNode("unitid", format(x))
 makeDate    <- function(x) newXMLNode("unitdate",  format(x))
 makeBox     <- function(x) newXMLNode("container", format(x), attrs = c(type="box"))
 makeFolder  <- function(x) newXMLNode("container", format(x), attrs = c(type="folder"))
+
+makeID      <- function(x) newXMLNode("unitid", format(x))
 makeCase    <- function(x) newXMLNode("container", format(x), attrs = c(label="audio",type="case"))
 makeObject  <- function(x) newXMLNode("container", format(x), attrs = c(label="Graphic Materials",type="object"))
 makeNote    <- function(x) newXMLNode("note",  format(x)) # creator
 makeBioHist <- function(x) newXMLNode("bioghist", format(x))
 makePhysDesc<- function(x) newXMLNode("physdesc", format(x))
 makeAcqInfo <- function(x) newXMLNode("acqinfo", format(x))
-
-makeDim <- function(x) newXMLNode("dimensions", format(x)) # need to add things in EAD.
+makeDim     <- function(x) newXMLNode("dimensions", format(x)) # need to add things in EAD.
 
 
 ###############################################################################
 ## Applying the functions to the dataframe
 ###############################################################################
-#sapply(row.names(raw_table),
+sapply(row.names(raw_table),
        function(x) {
          newXMLNode("c",
                     parent = box_folder_list,
@@ -118,4 +118,4 @@ sapply(row.names(raw_table),
                                   lapply(raw_table[x,1], makeCase),
                                   lapply(raw_table[x,5], makeAcqInfo)))
        })
-rm(main_ead)
+
