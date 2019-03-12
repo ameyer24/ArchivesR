@@ -1,0 +1,139 @@
+<ead>
+  <eadheader/>
+  <archdesc level="collection">
+    <did>
+      <unittitle>North Park Academy News</unittitle>
+      <unitid>9/2/2</unitid>
+      <physdesc altrender="whole">
+        <extent altrender="materialtype spaceoccupied">1 Import</extent>
+      </physdesc>
+      <unitdate normal="1959/1968">1959-1968</unitdate>
+    </did>
+    <accessrestrict>
+      <head>Conditions Governing Access</head>
+      <p>There are no access restrictions on the materials and the collection is open to all members of the public. However, the researcher assumes full responsibility for conforming with the laws of libel, privacy, and copyright that may be involved in the use of this collection.</p>
+    </accessrestrict>
+    <did>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume I</unittitle>
+        <unitdate>Sept. 1959- June 1960</unitdate>
+        <container type="box">1</container>
+        <container type="folder">1</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume II</unittitle>
+        <unitdate>Sept. 1960-June 1961</unitdate>
+        <container type="box">1</container>
+        <container type="folder">2</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume III</unittitle>
+        <unitdate>Sept. 1961-June 1962</unitdate>
+        <container type="box">1</container>
+        <container type="folder">3</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume IV</unittitle>
+        <unitdate>Sept. 1962-June 1963</unitdate>
+        <container type="box">1</container>
+        <container type="folder">4</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park College News - Volume IV (Loose Copies)</unittitle>
+        <unitdate>1962-1963</unitdate>
+        <container type="box">1</container>
+        <container type="folder">5</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume V</unittitle>
+        <unitdate>Sept 1963-June 1963</unitdate>
+        <container type="box">2</container>
+        <container type="folder">1</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume V (Loose Copies)</unittitle>
+        <unitdate>Oct 1964- June 1965</unitdate>
+        <container type="box">2</container>
+        <container type="folder">2</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy College News Index</unittitle>
+        <unitdate>1922-1969</unitdate>
+        <container type="box">2</container>
+        <container type="folder">3</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume VI</unittitle>
+        <unitdate>Oct 1964-June 1965</unitdate>
+        <container type="box">2</container>
+        <container type="folder">4</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume VII</unittitle>
+        <unitdate>Sept 1965-June 1966</unitdate>
+        <container type="box">2</container>
+        <container type="folder">5</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume VII (Loose Copies)</unittitle>
+        <unitdate>1964-1965</unitdate>
+        <container type="box">2</container>
+        <container type="folder">6</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume VII (Loose Copies)</unittitle>
+        <unitdate>Sept 1965-June 1966</unitdate>
+        <container type="box">2</container>
+        <container type="folder">7</container>
+      </c>
+      <c level="file">
+        <unittitle>The Viking Voice</unittitle>
+        <unitdate>1965-1967</unitdate>
+        <container type="box">2</container>
+        <container type="folder">8</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News The Viking Voice - Volume VIII (Loose Copies)</unittitle>
+        <unitdate>Sept 1966-June 1967</unitdate>
+        <container type="box">2</container>
+        <container type="folder">9</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News The Viking Voice  - Volume IX</unittitle>
+        <unitdate>Sept 1967-June 1968</unitdate>
+        <container type="box">2</container>
+        <container type="folder">10</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume X (Loose Copies)</unittitle>
+        <unitdate>Sept 1968-Dec 1968</unitdate>
+        <container type="box">2</container>
+        <container type="folder">11</container>
+      </c>
+      <c level="file">
+        <unittitle>The Viking Voice</unittitle>
+        <unitdate>Undated</unitdate>
+        <container type="box">2</container>
+        <container type="folder">12</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume III (Duplicate loose copies)</unittitle>
+        <unitdate>1961-1962</unitdate>
+        <container type="box">3</container>
+        <container type="folder">1</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume V (Duplicate loose copies)</unittitle>
+        <unitdate>1963-1964</unitdate>
+        <container type="box">3</container>
+        <container type="folder">2</container>
+      </c>
+      <c level="file">
+        <unittitle>North Park Academy News - Volume VI (Duplicate loose copies)</unittitle>
+        <unitdate>1964-1965</unitdate>
+        <container type="box">3</container>
+        <container type="folder">3</container>
+      </c>
+    </did>
+  </archdesc>
+</ead>
