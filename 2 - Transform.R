@@ -24,7 +24,7 @@ min_date <- min(raw_table$start_date, na.rm=T)
 max_date <- max(raw_table$end_date, na.rm=T)
 ## If the above process does not work; manually define the variables here.
 min_date <- "1842"
-max_date <- "1919"
+max_date <- "1999"
 
 ###############################################################################
 ## Standardize "No Date" Text
@@ -39,7 +39,7 @@ raw_table$Date <- if_else(raw_table$Date %in% date_unknown,
 ## Update Other Data
 ###############################################################################
 ## Update Folder Titles
-raw_table$Title <- gsub("Misc.","Miscellaneous",raw_table$Title)
+raw_table$Title <- gsub("Music Program – North Park - ","",raw_table$Title)
 raw_table$Title <- gsub(" & "," and ",raw_table$Title)
 
 ## Other Data Transformations - Local Data Clean Up
