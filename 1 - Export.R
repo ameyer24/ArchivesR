@@ -10,7 +10,7 @@ raw_table <- docx_extract_tbl(read_docx(word_import_file),trim=TRUE)
 ###############################################################################
 # By default, R expects things to be in this order; this renames the columns
 # Use the (optional) commands below to reorder as needed.
-colnames(raw_table) <- c("Title","Date","Desc","Box")
+colnames(raw_table) <- c("Title","Date","Box","Folder")
 
 
 ###############################################################################
